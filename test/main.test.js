@@ -13,9 +13,15 @@ describe('SvelteLanguageClient', () => {
 
   describe('_startServerWithNode', () => {
     const originalSpawn = cp.spawn
+    const originalLogger = client.logger
+
+    beforeEach(() => {
+      client.logger = { debug: () => {} }
+    })
 
     afterEach(() => {
       cp.spawn = originalSpawn
+      client.logger = originalLogger
     })
 
     it('spawns the language server with the given Node executable', async () => {
