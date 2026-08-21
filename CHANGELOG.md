@@ -1,5 +1,9 @@
 # Svelte for Pulsar changelog
 
+## v1.4.0
+
+- When the configured Node executable can't be started, the error notification now explains why (version managers like nvm are often invisible to Pulsar when launched from a desktop menu) and links directly to the package's settings to fix the `nodePath` option
+
 ## v1.3.0
 
 - Rename package to `svelte-pulsar` (was `ide-svelte`), update config namespace accordingly (settings under `ide-svelte.*` must be reconfigured)
