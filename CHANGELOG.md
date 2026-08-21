@@ -1,4 +1,10 @@
-# Atom IDE Svelte changelog
+# Svelte for Pulsar changelog
+
+## v1.3.0
+
+- Rename package to `svelte-pulsar` (was `ide-svelte`), update config namespace accordingly (settings under `ide-svelte.*` must be reconfigured)
+- Bump `svelte-language-server` to `0.18.4` for up to date Svelte support
+- Fix `enableSvelteDiagnostics` toggle for `svelte.config.js` diagnostics not being applied due to a stale `this` reference
 
 ## v1.2.0
 
